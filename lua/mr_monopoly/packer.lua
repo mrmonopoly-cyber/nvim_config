@@ -57,5 +57,7 @@ use {
     end
 }
 
+ use 'mbbill/undotree'
+
 end)
 
