@@ -58,6 +58,7 @@ use {
 }
 
  use 'mbbill/undotree'
+ use 'ionide/Ionide-vim'
 
 end)
 
