@@ -70,19 +70,3 @@ cmp.setup({
 })
 
 lsp.setup()
-
-local nvim_lsp = require("lspconfig")
-
-nvim_lsp.fsautocomplete.setup{
-  capabilities = capabilities,
-  on_attach = on_attach,
-  cmd = {'<path to dotnet-fsautocomplete>', '--background-service-enabled'},
-}
-
-local nvim_lsp = require("lspconfig")
-
-nvim_lsp.fsautocomplete.setup{
-      capabilities = capabilities,
-        on_attach = on_attach,
-          cmd = {'<fsautocomplete>', '--background-service-enabled'},
-      }

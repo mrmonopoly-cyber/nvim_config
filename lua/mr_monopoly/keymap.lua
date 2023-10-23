@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 vim.keymap.set("n","<C-n>",vim.cmd.NvimTreeToggle)
 vim.keymap.set("n","<esc>",vim.cmd.noh)
 
-
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv")
 
