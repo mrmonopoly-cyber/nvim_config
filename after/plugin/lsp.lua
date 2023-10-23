@@ -3,7 +3,8 @@ local lsp = require('lsp-zero').preset('recommended')
 ensure_installed = {
 	"clangd",
 	"clangd-format",
-	"rust_analyzer"
+	"rust_analyzer",
+    "arduino"
 }
 
 lsp.on_attach(function(client, bufnr)
@@ -70,7 +71,6 @@ cmp.setup({
 
 lsp.setup()
 
-
 local nvim_lsp = require("lspconfig")
 
 nvim_lsp.fsautocomplete.setup{
@@ -84,5 +84,5 @@ local nvim_lsp = require("lspconfig")
 nvim_lsp.fsautocomplete.setup{
       capabilities = capabilities,
         on_attach = on_attach,
-          cmd = {'<path to dotnet-fsautocomplete>', '--background-service-enabled'},
+          cmd = {'<fsautocomplete>', '--background-service-enabled'},
       }
