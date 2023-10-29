@@ -58,7 +58,5 @@ use {
 }
 
  use 'mbbill/undotree'
- use 'ionide/Ionide-vim'
- use 'sudar/vim-arduino-syntax'
 end)
 

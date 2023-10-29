@@ -4,7 +4,8 @@ ensure_installed = {
 	"clangd",
 	"clangd-format",
 	"rust_analyzer",
-    "arduino"
+    "arduino",
+    "bash"
 }
 
 lsp.on_attach(function(client, bufnr)
