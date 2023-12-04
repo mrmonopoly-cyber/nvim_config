@@ -58,5 +58,6 @@ use {
 }
 
  use 'mbbill/undotree'
+ use 'adelarsq/neofsharp.vim'
 end)
 

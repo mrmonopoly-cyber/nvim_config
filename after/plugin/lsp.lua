@@ -5,7 +5,9 @@ ensure_installed = {
 	"clangd-format",
 	"rust_analyzer",
     "arduino",
-    "bash"
+    "bash",
+    "latex",
+    "grammar"
 }
 
 lsp.on_attach(function(client, bufnr)
@@ -71,3 +73,15 @@ cmp.setup({
 })
 
 lsp.setup()
+
+-- arduino
+require'lspconfig'.arduino_language_server.setup{}
+
+-- fsautocomplete
+-- vim.cmd(autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fshar)
+-- vim.autocmd(BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp)
+
+
+require'lspconfig'.fsautocomplete.setup{}
+
+
