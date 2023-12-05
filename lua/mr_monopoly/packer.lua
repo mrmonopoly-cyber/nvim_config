@@ -58,7 +58,6 @@ use {
 }
 
  use 'mbbill/undotree'
- use 'ionide/Ionide-vim'
- use 'sudar/vim-arduino-syntax'
+ use 'adelarsq/neofsharp.vim'
 end)
 

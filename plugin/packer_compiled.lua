@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?/init.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1699392533/lib/lua/5.1/?.so"
+local package_path_str = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,11 +79,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
-  },
-  ["Ionide-vim"] = {
-    loaded = true,
-    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Ionide-vim",
-    url = "https://github.com/ionide/Ionide-vim"
   },
   LuaSnip = {
     loaded = true,
@@ -119,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neofsharp.vim"] = {
+    loaded = true,
+    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/neofsharp.vim",
+    url = "https://github.com/adelarsq/neofsharp.vim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -180,11 +180,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-arduino-syntax"] = {
-    loaded = true,
-    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/vim-arduino-syntax",
-    url = "https://github.com/sudar/vim-arduino-syntax"
   },
   ["vim-fugitive"] = {
     loaded = true,
