@@ -25,3 +25,12 @@ vim.keymap.set("n", "<leader><leader>", function ()
 end)
 
 vim.keymap.set("n","<leader>u", vim.cmd.UndotreeToggle)
+
+--latex
+vim.keymap.set("n","<leader>ll",function ()
+    local commnad = "latex -output-format=pdf "
+    local file = vim.api.nvim_buf_get_name(0)
+    print(commnad..file)
+    vim.fn.system(commnad..file);
+end
+)
