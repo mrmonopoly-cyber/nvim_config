@@ -34,3 +34,44 @@ vim.keymap.set("n","<leader>ll",function ()
     vim.fn.system(commnad..file);
 end
 )
+
+--arduino
+vim.keymap.set("n", "<leader>pp", function ()
+    local bufnr = vim.api.nvim_create_buf(true, false)
+    local compile_command = "arduino-cli compile --fqbn"
+    local upload_command = "arduino-cli upload --fqbn"
+    local upload_port = "-p /dev/ttyUSB0"
+    local sketch_file = io.open("sketch.yaml", "r")
+
+    if sketch_file ~= nil then
+        local first_row = sketch_file:read()
+        local arduino_board = string.sub(first_row, string.len("default_fqbn: "), string.len(first_row))
+        local compile_output = vim.fn.systemlist(compile_command .. arduino_board)
+        local upload_output = vim.fn.systemlist(upload_command .. arduino_board .. ' ' .. upload_port)
+
+        local output_lines = {}
+        -- Accumula le linee di output
+        for _, line in ipairs(compile_output) do
+            table.insert(output_lines, line)
+        end
+
+        -- Aggiungi una riga vuota di separazione tra i comandi
+        table.insert(output_lines, "")
+
+        for _, line in ipairs(upload_output) do
+            table.insert(output_lines, line)
+        end
+
+        -- Imposta tutte le linee nel buffer
+        vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, output_lines)
+
+        -- Apri il nuovo buffer in una nuova finestra
+        vim.api.nvim_command('split')
+        vim.api.nvim_command('b' .. bufnr)
+
+        -- Rendi il buffer non modificabile (opzionale)
+        vim.api.nvim_buf_set_option(bufnr, 'modifiable', false)
+    else
+        print("sketch.yaml not found")
+    end
+end)
