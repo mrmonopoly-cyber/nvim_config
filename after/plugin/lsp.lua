@@ -73,6 +73,8 @@ cmp.setup({
 })
 
 lsp.setup()
+--vscode like snippet
+require("luasnip.loaders.from_vscode").lazy_load()
 
 -- arduino
 require'lspconfig'.arduino_language_server.setup{}
