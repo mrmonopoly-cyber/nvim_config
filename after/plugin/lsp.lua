@@ -80,10 +80,8 @@ require("luasnip.loaders.from_vscode").lazy_load()
 require'lspconfig'.arduino_language_server.setup{}
 
 -- fsautocomplete
--- vim.cmd(autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fshar)
+-- vim.cmd("autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp")
 -- vim.autocmd(BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp)
-
-
 require'lspconfig'.fsautocomplete.setup{}
 
 
