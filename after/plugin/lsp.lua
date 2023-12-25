@@ -24,6 +24,9 @@ cmp.setup({
     {name = 'nvim_lsp'},
   },
   mapping = {
+    ['<C-l>'] = function ()
+        vim.lsp.buf.definition()
+    end,
     ['<C-Enter>'] = cmp.mapping.confirm({select = true}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),

@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},     -- Required
 		  {'hrsh7th/cmp-nvim-lsp'}, -- Required
+          {'hrsh7th/cmp-path'},
 		  {'L3MON4D3/LuaSnip'},     -- Required
           {'saadparwaiz1/cmp_luasnip'}, --vscode like snippets
           {'rafamadriz/friendly-snippets'}, --vscode like snippets
@@ -66,5 +67,6 @@ use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+ use 'folke/trouble.nvim'
 end)
 
