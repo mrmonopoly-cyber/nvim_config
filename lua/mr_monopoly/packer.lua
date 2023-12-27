@@ -75,5 +75,11 @@ use {
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
 }
+use {
+  "aznhe21/actions-preview.nvim",
+  config = function()
+    vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
+  end,
+}
 end)
 
