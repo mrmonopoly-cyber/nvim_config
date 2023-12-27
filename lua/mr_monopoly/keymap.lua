@@ -75,3 +75,6 @@ vim.keymap.set("n", "<leader>pp", function ()
         print("sketch.yaml not found")
     end
 end)
+
+--action menu
+vim.keymap.set({ "v", "n" }, "<leader>ac", require("actions-preview").code_actions)
