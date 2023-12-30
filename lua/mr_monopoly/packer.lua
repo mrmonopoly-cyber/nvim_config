@@ -76,6 +76,7 @@ use {
     },
 }
 use 'aznhe21/actions-preview.nvim'
+use { 'kosayoda/nvim-lightbulb' }
 
 end)
 
