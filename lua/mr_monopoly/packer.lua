@@ -47,7 +47,6 @@ use {
     "nvim-tree/nvim-tree.lua",
   }
 }
-use ('sakhnik/nvim-gdb')
 use{
   "NvChad/nvterm",
   config = function ()
@@ -77,6 +76,13 @@ use {
 }
 use 'aznhe21/actions-preview.nvim'
 use { 'kosayoda/nvim-lightbulb' }
+use {
+    'mfussenegger/nvim-dap',
+    requires = {
+        'rcarriga/nvim-dap-ui',
+    }
+}
+
 
 end)
 
