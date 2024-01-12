@@ -79,3 +79,5 @@ end)
 
 --action menu
 vim.keymap.set({ "v", "n" }, "<leader>ac", require("actions-preview").code_actions)
+--fine cmd
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
