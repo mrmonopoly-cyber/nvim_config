@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["Ionide-vim"] = {
+    loaded = true,
+    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Ionide-vim",
+    url = "https://github.com/ionide/Ionide-vim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -99,6 +104,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -154,11 +164,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neofsharp.vim"] = {
-    loaded = true,
-    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/neofsharp.vim",
-    url = "https://github.com/adelarsq/neofsharp.vim"
   },
   ["nui.nvim"] = {
     loaded = true,

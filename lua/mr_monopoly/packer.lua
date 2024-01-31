@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},     -- Required
           {'saadparwaiz1/cmp_luasnip'}, --vscode like snippets
           {'rafamadriz/friendly-snippets'}, --vscode like snippets
+          {'hrsh7th/cmp-nvim-lsp-signature-help'}
 	  }
 }
 use {
@@ -61,7 +62,6 @@ use {
 }
 
  use 'mbbill/undotree'
- use 'adelarsq/neofsharp.vim'
  use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -89,6 +89,7 @@ use {
     {'MunifTanjim/nui.nvim'}
   }
 }
+use 'ionide/Ionide-vim'
 
 end)
 
