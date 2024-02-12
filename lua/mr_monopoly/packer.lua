@@ -89,7 +89,6 @@ use {
     {'MunifTanjim/nui.nvim'}
   }
 }
-use 'ionide/Ionide-vim'
 
 end)
 

@@ -80,11 +80,6 @@ _G.packer_plugins = {
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["Ionide-vim"] = {
-    loaded = true,
-    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/Ionide-vim",
-    url = "https://github.com/ionide/Ionide-vim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/LuaSnip",
