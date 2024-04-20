@@ -4,7 +4,6 @@ ensure_installed = {
 	"clangd",
 	"clangd-format",
 	"rust_analyzer",
-    "arduino",
     "bash",
     "latex",
     "grammar"
@@ -20,7 +19,7 @@ local cmp = require('cmp')
 local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
-  sources = {
+  sonnces = {
     {name = 'nvim_lsp'},
   },
   mapping = {
@@ -95,4 +94,3 @@ require'lspconfig'.rust_analyzer.setup{
     }
   }
 }
-
