@@ -8,18 +8,3 @@ null_ls.setup({
         null_ls.builtins.formatting.rustfmt,
     },
 })
-
-local lsp = require('lsp-zero').preset({})
-
-lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
-end)
-
-lsp.format_mapping('gq', {
-    servers = {
-        ['lua_ls'] = { 'lua' },
-        ['rust_analyzer'] = { 'rust' },
-    }
-})
-
-lsp.setup()

@@ -94,5 +94,12 @@ use {
   }
 }
 
+use {
+    "folke/todo-comments.nvim",
+    requires = {
+        dependencies = { "nvim-lua/plenary.nvim" },
+    },
+}
+
 end)
 
