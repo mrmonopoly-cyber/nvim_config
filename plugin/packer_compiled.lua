@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
+local package_path_str = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mr_monopoly/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -195,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/mr_monopoly/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -249,14 +254,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvterm
-time([[Config for nvterm]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vnvterm\frequire\0", "config", "nvterm")
-time([[Config for nvterm]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: nvterm
+time([[Config for nvterm]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vnvterm\frequire\0", "config", "nvterm")
+time([[Config for nvterm]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -80,6 +80,7 @@ use {
     'mfussenegger/nvim-dap',
     requires = {
         'rcarriga/nvim-dap-ui',
+        'nvim-neotest/nvim-nio',
     }
 }
 
