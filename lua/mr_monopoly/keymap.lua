@@ -77,5 +77,33 @@ end)
 
 --action menu
 vim.keymap.set({ "v", "n" }, "<leader>ac", require("actions-preview").code_actions)
---fine cmd
-vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
+--full path file
+vim.keymap.set({"v","n"},"<leader>p",function ()
+    local path = vim.api.nvim_buf_get_name(0)
+    local dir_path = ""
+    local temp = ""
+    path:gsub(".",function(i)
+        temp = temp .. i
+        if i == "/" then
+            dir_path = dir_path .. temp
+            temp = ""
+        end
+    end)
+    vim.api.nvim_set_current_dir(dir_path)
+    print(dir_path)
+end)
+
+vim.keymap.set({"v","n"},"<leader>wu",function ()
+    local path = vim.loop.cwd()
+    local dir_path = ""
+    local temp = ""
+    path:gsub(".",function(i)
+        temp = temp .. i
+        if i == "/" then
+            dir_path = dir_path .. temp
+            temp = ""
+        end
+    end)
+    vim.api.nvim_set_current_dir(dir_path)
+    print(dir_path)
+end)

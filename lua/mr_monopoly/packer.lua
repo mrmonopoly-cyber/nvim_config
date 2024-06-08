@@ -88,13 +88,6 @@ use {
 }
 
 use {
-  'VonHeikemen/fine-cmdline.nvim',
-  requires = {
-    {'MunifTanjim/nui.nvim'}
-  }
-}
-
-use {
     "folke/todo-comments.nvim",
     requires = {
         dependencies = { "nvim-lua/plenary.nvim" },
