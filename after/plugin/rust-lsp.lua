@@ -6,6 +6,9 @@ lspconfig.rust_analyzer.setup({
             diagnostics = {
                 enable = true;
             },
+            checkOnSave = {
+                command = "clippy", -- Runs Clippy to catch warnings/errors
+            },
             imports = {
                 granularity = {
                     group = "module",
@@ -13,9 +16,7 @@ lspconfig.rust_analyzer.setup({
                 prefix = "self",
             },
             cargo = {
-                buildScripts = {
-                    enable = true,
-                },
+                allFeatures = true,
             },
             procMacro = {
                 enable = true
