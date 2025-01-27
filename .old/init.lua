@@ -1,0 +1,2 @@
+require("mr_monopoly")
+
