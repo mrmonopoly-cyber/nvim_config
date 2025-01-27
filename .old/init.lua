@@ -1,2 +1,0 @@
-require("mr_monopoly")
-
