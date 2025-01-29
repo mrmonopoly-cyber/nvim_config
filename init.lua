@@ -42,6 +42,11 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+  update_focused_file = {
+    enable = true,  -- Automatically update the tree when switching files
+    update_cwd = true,  -- Update the tree root directory to match the file
+    ignore_list = {}  -- No files are ignored
+  }
 })
 
 require("mason").setup()
