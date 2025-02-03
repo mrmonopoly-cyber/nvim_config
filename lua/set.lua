@@ -38,3 +38,8 @@ vim.opt.expandtab = true      -- Use spaces instead of tabs
 vim.opt.shiftwidth = 2        -- The number of spaces to use for each level of indentation
 vim.opt.softtabstop = 2       -- The number of spaces a <Tab> counts for while editing
 vim.opt.tabstop = 2           -- The number of spaces a <Tab> counts for while displaying
+
+vim.opt.list = true
+vim.opt.listchars:append("space:·")
+vim.opt.listchars:append("tab:→ ")
+vim.opt.listchars:append("trail:·")
