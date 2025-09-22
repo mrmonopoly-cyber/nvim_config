@@ -76,18 +76,8 @@ cmp.setup({
 
 lsp.setup()
 
--- arduino
-require'lspconfig'.arduino_language_server.setup{}
-
 require'cmp'.setup {
   sources = {
     { name = 'nvim_lsp_signature_help' }
-  }
-}
-
-require'lspconfig'.rust_analyzer.setup{
-  settings = {
-    ['rust-analyzer'] = {
-    }
   }
 }
