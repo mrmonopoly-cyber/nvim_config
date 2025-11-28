@@ -25,6 +25,9 @@ vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end)
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
+--terminal 
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true})
+
 --latex
 vim.keymap.set("n", "<leader>ll", function()
     local commnad = "latex -output-format=pdf "
