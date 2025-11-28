@@ -35,7 +35,7 @@ end
 )
 
 --make
-vim.keymap.set("n", "<leader>mm",vim.cmd.make)
+vim.keymap.set("n", "<leader>mm",vim.cmd.make,{ desc = "Make command" })
 
 --full path file
 vim.keymap.set({"v","n"},"<leader>p",function ()
