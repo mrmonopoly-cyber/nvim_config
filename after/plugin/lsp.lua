@@ -81,3 +81,12 @@ require'cmp'.setup {
     { name = 'nvim_lsp_signature_help' }
   }
 }
+
+require("lspconfig").jdtls.setup({
+  cmd = { "jdtls" }, -- Mason wrapper
+  cmd_env = {
+    JAVA_HOME = "/usr/lib/jvm/java-21-openjdk",
+    PATH = "/usr/lib/jvm/java-21-openjdk/bin:" .. vim.env.PATH,
+  },
+})
+

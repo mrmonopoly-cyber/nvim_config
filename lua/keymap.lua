@@ -21,12 +21,17 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end)
+vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end, { desc = "update nvim conf"})
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 --terminal 
-vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true})
+vim.keymap.set('t', '<Esc>', "<C-\\><C-n><C-w>h",{silent = true}, { desc = "esc terminal mode"})
+vim.keymap.set('n', '<leader>t', function ()
+  vim.cmd("tab new")
+  vim.cmd("term")
+  vim.cmd("startinsert")
+end,  { desc = "open new tab with terminal"})
 
 --latex
 vim.keymap.set("n", "<leader>ll", function()
