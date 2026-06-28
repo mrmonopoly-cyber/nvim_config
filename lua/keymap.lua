@@ -75,3 +75,16 @@ vim.keymap.set({"v","n"},"<leader>wu",function ()
     vim.api.nvim_set_current_dir(dir_path)
     print(dir_path)
 end)
+
+
+
+--disable syntax
+vim.keymap.set("n","<leader>ln",function ()
+  vim.cmd("TSBufDisable highlight")
+  vim.cmd("TSBufDisable indent")
+  vim.cmd("TSBufDisable incrememntal_selection")
+  vim.cmd("syntax off")
+  vim.cmd("LspStop")
+  vim.o.complete = ""
+end, { desc = "disable all suggestions"})
+
